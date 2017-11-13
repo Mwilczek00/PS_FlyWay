@@ -2,7 +2,7 @@ Push-Location; Import-Module sqlps -DisableNameChecking; Pop-Location
 
 $serverPath = "SQLSERVER:\SQL\localhost\Default"
 $databaseName = "Payroll"
-$restoreFrom = join-path (Get-Location) "$databaseName.bak"
+$restoreFrom = join-path (Get-Location) "$databaseName-After.bak"
 
 $databasePath = join-path $serverPath "Databases\$databaseName"
 if(Test-Path $databasePath)
